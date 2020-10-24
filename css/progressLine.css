@@ -1,0 +1,24 @@
+.varticalProgress{
+   position: fixed;
+   width: 80vh;
+   /* background: linear-gradient(85deg, #fb63f9, #c2e534); */
+   border: 2px solid black;
+   z-index: 1;
+   margin-left: 2%;
+   margin-top: 14vh;
+   transform-origin: left;
+   transform: rotateZ(90deg);
+   display: flex;
+   flex-wrap: wrap;
+}
+.varticalProgress .progressArrow{
+   position: absolute;
+   width: 20px;
+   height: 25px;
+   border: 10px solid transparent;
+   border: 1px solid black;
+   background-color: rgb(209, 245, 245, 0.5); 
+   z-index: 2;
+   transform: translateY(-12px);
+   transition: 0.5s;
+}

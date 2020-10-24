@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   box-sizing: border-box;
+}
+
+body{
+   background-image:url('./../image/mainFon.jpg');
+   background-repeat: no-repeat;
+   background-size: 100vw;
+   background-position:center;
+   background-attachment: fixed;
+}
+
+.mainContainer{
+   position: relative;
+   display:grid;
+   grid-template-areas: 'header' 'content' 'footer';
+   height: 100%;
+   grid-gap: 2vw;
+   overflow: hidden;
+}
+
+.header{
+   position: relative;
+   grid-area: header;
+   width: 100vw;
+   height: 100vh;
+   background-attachment: fixed;
+   background-size: 100vw 100vh;
+   background-position: center;
+   background-repeat: no-repeat;
+   z-index: 0  ;
+}
+
+.header .headerBlackFon{
+   background-color: rgba(0, 0, 0, 0.3);
+   height: 100%;
+   width: 100%;
+   display:grid;
+   grid-template-areas: 
+      'headerMenuFon headerMenuFon headerMenuFon headerMenuFon headerMenuFon headerMenuFon headerMenuFon headerMenuFon headerMenuFon'
+      '. . . . . . . . .'
+      'headerText headerText headerText headerText headerText headerText headerText headerText headerText'
+      '. . . . . . . . .';
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1.3fr 0.5fr 6.5fr 0.5fr;
+   grid-gap: 1vw;
+   position: relative;
+}
+.header .fon{
+   width: 100%;
+   height: 100%;
+}
+.headerMenuFon{
+   position: relative;
+   grid-area: headerMenuFon;
+   display:grid;
+   grid-template-areas: '. headerLogo . headerMenu . headerContacts';
+   grid-template-columns: 0.1fr 1fr 0.2fr  2.5fr 0.3fr 1.3fr;
+   grid-template-rows: 1fr;
+   background-color: rgba(0, 0, 0, 0.3);
+   border-bottom: 1.5px solid rgba(255, 255, 255, 1);
+   transform-origin: top;
+}
+.headerLogo{
+   grid-area:headerLogo;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+.headerLogoImg{
+   height: 70px;
+   width: 120px;
+   background-color:royalblue;
+}
+.headerLogoImg img{
+   width: 100%;
+   height: 100%;
+}
+.headerMenu{
+   position: relative;
+   grid-area:headerMenu;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items:center;
+}
+.headerMenu .headerMenuLink{
+   margin: 0.7;
+   display: flex;
+   justify-content: center;
+   align-items:center;
+   width: 18%;
+   height: 40%;
+   transition-delay: 0.2s;
+   transition-duration: 1s;
+   transition-property: all;
+   color:rgb(69, 175, 175);
+   font-weight: 550;
+   font-size: 0.8em;
+   border-bottom: 1.5px solid rgb(10, 10, 10, 0.3);
+}
+.headerMenuLink:hover{
+   border-bottom: 1.5px solid white;
+   transform: scale(1.01);
+   color:rgb(255, 255, 255);
+   cursor: pointer;
+}
+.headerContacts{
+   grid-area:headerContacts;
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+.headerContactLink{
+   width: 55%;
+   height: 40%;
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items:center;
+   color:rgb(69, 175, 175);
+   font-weight: 550;
+   font-size: 0.8em;
+   border-bottom: 1.5px solid rgb(10, 10, 10, 0.3);
+   transition-delay: 0.2s;
+   transition-duration: 1s;
+   transition-property: all;
+}
+.headerContacts .headerContactLink:hover{
+   cursor: pointer;
+   border-bottom: 1.5px solid white;
+   color: white;
+   transform: scale(1.01);
+}
+.headerText{
+   grid-area:headerText;
+   display:flex;
+   justify-content: center;
+   align-items:center;
+   flex-wrap: wrap;
+}
+.headerText .headerTextFrame{
+   color:cornsilk;
+   font-weight: 800;
+   font-size: 2em;
+   transition: 1s;
+   transform-origin: left;
+   width: 80%;
+   height: 80%;
+}
+
+.content{
+   grid-area: content;
+   display:grid;
+   grid-column: 1fr;
+   grid-row: 1fr;
+}
+.content .contentBlocks{
+   width: 100%;
+   height: 130vh;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: flex-start;
+   margin-bottom: 3vh;
+   padding-top: 8vh;
+}
+
+.content .contentBlocks .contentBlocksTop{
+   width: 100%;
+   height: 15%;
+   display: flex;
+   flex-wrap: wrap;
+   align-items:center;
+}
+.content .contentBlocks .contentBlocksTop .contentLines{
+   width: 60%;
+   height: 5px;
+   background: linear-gradient(85deg, #fb63f9, #c2e534);
+   border-top-right-radius: 3px;
+}
+
+.content .contentBlocks .contentBlocksTop .contentLineText{
+   width: 35%;
+   height: 75%;
+   display:flex;
+   flex-wrap: wrap;
+   align-content: center;
+   justify-content: center;
+   font-size: 1.6em;
+   font-weight: 600;
+   border: 1px solid #c2e534;
+   border-top-left-radius: 50px;
+   border-bottom-right-radius: 50px;
+   margin-right: 2%;
+   background: linear-gradient(85deg, #c2e534, #fb63f9);
+}
+.content .contentBlocks .contentLowBlocks{
+   width: 93%;
+   height: 80%;
+   border-radius: 50px;
+   overflow-y: scroll;
+   display: flex;
+   flex-wrap: wrap;
+   align-items:flex-start;
+   justify-content: space-around;
+   background-color: rgba(255, 255, 255, 0.3)
+}
+.content .contentBlocks .contentLowBlocks .blocks{
+   border: 1px solid black;
+   width: 300px;
+   height: 350px;
+   margin:20px;
+   border-radius:50px;
+}
+
+.footer{
+   grid-area: footer;
+   height: 70vh;
+   width:100vw;
+   background-image: url('./../image/footerImage.jpg');
+   background-attachment: fixed;
+   background-size:100%;
+   background-position: center;
+   background-repeat: none;
+}
+
+.footerFon{
+   height: 100%;
+   width:100%;
+   background-color: rgba(0, 0, 0, 0.6);
+   display:grid;
+   grid-template-areas: '. . . . . '
+                        'leftBlock . middleBlock . rightBlock' 
+                        'lowBlock lowBlock lowBlock lowBlock lowBlock';
+   grid-template-columns: 3fr 0.5fr 3fr 0.5fr 3fr;
+   grid-gap: 1vw;
+   grid-template-rows: 1fr 10fr 2fr;
+}
+.leftBlock{
+   grid-area: leftBlock;
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   color: beige;
+}
+.leftBlock form{
+   width: 70%;
+   height: 90%;
+   text-align: right;
+}
+.leftBlock form label{
+   font-weight: 600;
+   font-size: 1.5em;
+   height: 100%;
+}
+.leftBlock form input{
+   width: 90%;
+   height: 10%;
+   border: none;
+   background-color: none;
+   opacity: 0.5;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 10px;
+   margin-top: 10%;
+}
+.leftBlock form input:focus{
+   outline: none;
+   border-bottom: 1px solid black;
+   opacity: 0.9;
+   
+}
+.leftBlock form button{
+   background-color:rgb(69, 175, 175);
+   border: none;
+   cursor: pointer;
+   width: 120px;
+   height: 30px;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 10px;
+   margin-top: 10%;
+   font-weight: 550;
+}
+.middleBlock{
+   grid-area: middleBlock;
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+.middleBlock ul{
+   width: 80%;
+   height: 90%;
+   color: white;
+   font-size: 16px;
+   font-weight: 550;
+   list-style-type: none;
+   text-align: center;
+}
+
+.rightBlock{
+   grid-area: rightBlock;
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+.rightBlock div{
+   width: 70%;
+   height: 90%;
+   text-align: center;
+   color: rgb(196, 214, 114);
+   font-size: 16px;
+   font-weight: 550;
+}
+
+.rightBlock div a{
+   text-decoration: none;
+   color: cyan;
+   content: "";
+   display: block;
+   width: 80%;
+   height: 10%;
+   margin-top: 5%;
+}
+.rightBlock div span{
+   text-align: center;
+   display: block;
+   width: 80%;
+   height: 10%;
+   margin-top: 15%;
+}
+.lowBlock{
+   grid-area: lowBlock;
+   border-top: 1px solid wheat;
+   color:rgba(255, 255, 255, 1);
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   font-weight: 525;
+   font-size: 1.3em;
+}
+
+@media screen and (max-width: 720px){
+   .headerMenuFon{
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+   }
+   .headerLogo{
+      width: 0;
+      height: 0;
+   }
+
+   .headerLogoImg{
+      position: absolute;
+      height: 30px;
+      width: 60px;
+      z-index: 3;
+      margin-top: 7.8vh;
+      margin-left: 5vw;
+   }
+
+   .headerMenu{
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 100vw;
+      height: 8vh;
+   }
+   .headerContacts{
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100vw;
+      height: 5vh;
+   }
+   .headerContactLink{
+      width: 25vw;
+   }
+
+   .footer{
+      height: 100vh;
+      width:100vw;
+   }
+
+   .footerFon{
+      height: 100%;
+      width:100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display:grid;
+      grid-template-areas: '.' 
+                           'leftBlock' 
+                           '.' 
+                           'middleBlock ' 
+                           '.' 
+                           'rightBlock'
+                           '.'
+                           'lowBlock';
+      grid-template-columns: 1fr;
+      grid-gap: 1vw;
+      grid-template-rows: 2fr 8fr 2fr 8fr 2fr 8fr 2fr 4fr;
+   }
+
+   .leftBlock{
+      border-bottom: 1px solid white;
+      padding-bottom: 7%;
+   }
+   .middleBlock{
+      border-bottom: 1px solid white;
+      padding-bottom: 7%;
+   }
+
+   .leftBlock form input{
+      height: 25px;
+   }
+}
